@@ -1,0 +1,6 @@
+{
+  "name": "Catalogo de Activos SPV - Landing Page",
+  "description": "Una landing page para visualizar activos de TI, agrupados por dominio. La información se obtiene de una API externa y se presenta en tarjetas de estilo Material-UI.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}
