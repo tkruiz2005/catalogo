@@ -58,7 +58,7 @@ export const DeudaProgress: React.FC<DeudaProgressProps> = ({ deuda }) => {
              <div className="flex items-start text-gray-600 pt-3 border-t border-gray-100">
                 <AlertTriangleIcon className="w-5 h-5 mr-2 text-yellow-500 flex-shrink-0 mt-0.5" />
                 <div>
-                    <p className="font-medium text-gray-700">Deuda Técnica</p>
+                    <p className="font-medium text-gray-700 text-base">Deuda Tecnica - Datos Mock</p>
                     <p className="text-gray-500 leading-tight">{deuda}</p>
                 </div>
             </div>
@@ -84,7 +84,7 @@ export const DeudaProgress: React.FC<DeudaProgressProps> = ({ deuda }) => {
   
   return (
     <div className="pt-3 border-t border-gray-100">
-       <p className="font-medium text-gray-700 mb-2">Deuda Técnica</p>
+       <p className="font-medium text-gray-700 mb-2 text-base">Deuda Tecnica - Datos Mock</p>
        <div className="flex items-center gap-4">
            <ProgressCircle percentage={totalDeuda} color={colorClass} />
            <div className="space-y-1 text-xs">
