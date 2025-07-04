@@ -1,6 +1,6 @@
 import React from 'react';
 import { Activo, DeudaDetalle } from '../types';
-import { AlertTriangleIcon } from './Icons';
+import { AlertTriangleIcon, InfoIcon } from './Icons';
 
 interface DeudaProgressProps {
   deuda: Activo['Deuda'];
@@ -84,7 +84,20 @@ export const DeudaProgress: React.FC<DeudaProgressProps> = ({ deuda }) => {
   
   return (
     <div className="pt-3 border-t border-gray-100">
-       <p className="font-medium text-gray-700 mb-2 text-base">Deuda Tecnica - Datos Mock</p>
+        <div className="flex items-center mb-2">
+            <p className="font-medium text-gray-700 text-base">Deuda Tecnica - Datos Mock</p>
+            <div className="relative group ml-2">
+                <InfoIcon className="w-4 h-4 text-gray-400 cursor-help" />
+                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max max-w-xs hidden group-hover:block bg-gray-800 text-white text-xs rounded-lg py-2 px-3 z-10 shadow-lg pointer-events-none">
+                    <p className="font-bold mb-1 border-b border-gray-600 pb-1">Detalle deuda tecnica</p>
+                    <ul className="list-none text-left mt-2 space-y-1">
+                        <li><span className="font-semibold">SOA:</span> Consumo de SOA</li>
+                        <li><span className="font-semibold">DW:</span> Consumo del DW</li>
+                        <li><span className="font-semibold">API:</span> Consumo no APIC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
        <div className="flex items-center gap-4">
            <ProgressCircle percentage={totalDeuda} color={colorClass} />
            <div className="space-y-1 text-xs">
